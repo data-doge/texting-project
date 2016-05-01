@@ -9,6 +9,7 @@ $('#record').click(function () {
   $(this).hide()
   $('#stop').show()
   $('#recording-indicator').show()
+  $('#record-pad').focus()
 })
 
 $('#stop').click(function () {
