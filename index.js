@@ -3,14 +3,20 @@ import keystrokeRecorder from './../npm/keystroke-recorder/index.js'
 import jsonMarkup from 'json-markup'
 import copy from 'copy-to-clipboard'
 
-$('#record').click(() => {
+$('#record').click(function () {
   $('#record-pad').val('')
   keystrokeRecorder.record()
+  $(this).hide()
+  $('#stop').show()
+  $('#recording-indicator').show()
 })
 
-$('#stop').click(() => {
+$('#stop').click(function () {
   $('#record-pad').val('')
   keystrokeRecorder.stop()
+  $(this).hide()
+  $('#record').show()
+  $('#recording-indicator').hide()
   var json = keystrokeRecorder.json
   var jsonFormatted = jsonMarkup(json)
   $('#json-data').html(jsonFormatted)
