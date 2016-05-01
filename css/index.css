@@ -5,3 +5,16 @@ body {
 h3 {
   font-weight: lighter;
 }
+
+#json-data-header {
+  display: inline-block;
+}
+
+#json-data {
+  margin-top: 0;
+  padding: 10px;
+  display: inline-block;
+  min-height: 110px;
+  min-width: 262px;
+  border: 1px solid black;
+}

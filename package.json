@@ -34,9 +34,9 @@
   },
   "homepage": "https://github.com/data-doge/texting-project",
   "dependencies": {
+    "copy-to-clipboard": "^2.0.0",
     "jquery": "^2.2.3",
     "json-markup": "^0.1.7",
-    "json-to-html": "^0.1.2",
     "keystroke-recorder": "^1.1.0"
   },
   "devDependencies": {
