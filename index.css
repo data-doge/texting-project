@@ -28,3 +28,32 @@ h3 {
   min-width: 262px;
   border: 1px solid black;
 }
+
+/* from @mafintosh, https://github.com/mafintosh/json-markup/blob/master/style.css */
+
+.json-markup {
+	line-height: 17px;
+	font-size: 13px;
+	font-family: monospace;
+	white-space: pre;
+}
+
+.json-markup-key {
+	font-weight: bold;
+}
+
+.json-markup-bool {
+	color: firebrick;
+}
+
+.json-markup-string {
+	color: green;
+}
+
+.json-markup-null {
+	color: gray;
+}
+
+.json-markup-number {
+	color: blue;
+}
