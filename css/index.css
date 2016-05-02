@@ -6,7 +6,7 @@ h3 {
   font-weight: lighter;
 }
 
-#recording-indicator {
+#recording-indicator, #replaying-indicator {
   display: none;
   font-size: 11px;
   margin-left: 10px;
