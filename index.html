@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>texting-project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./css/index.css" rel="stylesheet" />
+    <link href="./css/json-markup.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div>
+      <h3>record your text here</h3>
+      <textarea id="record-pad" rows="8" cols="40"></textarea>
+      <div>
+        <button type="button" id="record">RECORD</button>
+        <button type="button" id="stop">STOP</button>
+        <span id="recording-indicator">recording...</span>
+      </div>
+    </div>
+
+    <div>
+      <h3>watch real-time playback here</h3>
+      <textarea disabled id="replay-pad" rows="8" cols="40"></textarea>
+      <div>
+        <button type="button" id="replay">REPLAY</button>
+        <span id="replaying-indicator">replaying...</span>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <h3 id="json-data-header">raw JSON here</h3>
+        <button type="button" id="copy-to-clipboard-btn">copy to clipboard</button>
+      </div>
+      <p id="json-data"></p>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
