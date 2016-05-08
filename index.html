@@ -7,31 +7,48 @@
     <link href="./index.css" rel="stylesheet" />
   </head>
   <body>
-    <div>
-      <h3>record your text here</h3>
-      <textarea id="record-pad" rows="8" cols="40"></textarea>
+    <div id="record-pane">
       <div>
-        <button type="button" id="record">RECORD</button>
-        <button type="button" id="stop">STOP</button>
-        <span id="recording-indicator">recording...</span>
+        <h3>record your text here</h3>
+        <textarea id="record-pad" rows="8" cols="40"></textarea>
+        <div>
+          <button type="button" id="record">RECORD</button>
+          <button type="button" id="stop">STOP</button>
+          <span id="recording-indicator">recording...</span>
+        </div>
+      </div>
+
+      <div>
+        <h3>watch real-time playback here</h3>
+        <textarea disabled id="replay-pad" rows="8" cols="40"></textarea>
+        <div>
+          <button type="button" id="replay">REPLAY</button>
+          <span id="replaying-indicator">replaying...</span>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <h3 id="json-data-header">raw JSON here</h3>
+          <button type="button" id="copy-to-clipboard-btn">copy to clipboard</button>
+        </div>
+        <p id="json-data"></p>
+      </div>
+
+      <div>
+        <a href="" id="see-animation-example-link">see animated text example</a>
       </div>
     </div>
 
-    <div>
-      <h3>watch real-time playback here</h3>
-      <textarea disabled id="replay-pad" rows="8" cols="40"></textarea>
-      <div>
-        <button type="button" id="replay">REPLAY</button>
-        <span id="replaying-indicator">replaying...</span>
-      </div>
-    </div>
+    <div id="animation-example-pane">
+      <h3>Animation Example</h3>
 
-    <div>
       <div>
-        <h3 id="json-data-header">raw JSON here</h3>
-        <button type="button" id="copy-to-clipboard-btn">copy to clipboard</button>
+        <button type="button" id="play-animation-example">play example animation</button>
+        <span id="playing-animation-indicator">playing animation...</span>
       </div>
-      <p id="json-data"></p>
+
+      <p id="animation-example-text"></p>
     </div>
     <script src="bundle.js"></script>
   </body>
