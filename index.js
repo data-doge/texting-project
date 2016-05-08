@@ -51,11 +51,17 @@ $('#copy-to-clipboard-btn').click(() => {
   copy(json)
 })
 
-// $('#see-animation-example-link').click((e) => {
-//   e.preventDefault()
+$('#see-animation-example-link').click((e) => {
+  e.preventDefault()
   $('#record-pane').hide()
   $('#animation-example-pane').show()
-// })
+})
+
+$('#see-keystroke-recorder-example-link').click((e) => {
+  e.preventDefault()
+  $('#record-pane').show()
+  $('#animation-example-pane').hide()
+})
 
 $('#play-animation-example').click(() => {
   $('#play-animation-example').hide()
