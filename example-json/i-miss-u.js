@@ -124,6 +124,21 @@ export default [
     ms: 8668
   },
   {
+    eventType: 'animation',
+    callback: () => {
+      var hsl = {h: 194, s: 100, l: 100}
+      var tween = new TWEEN.Tween(hsl)
+        .to({l: 80}, 12012 - 8868)
+        .onUpdate(() => {
+          var hslString = Color(hsl).hslString()
+          $('body').css('background', hslString)
+        })
+        .easing(TWEEN.Easing.Quintic.In)
+        .start()
+    },
+    ms: 8868
+  },
+  {
     eventType: 'keydown',
     keyCode: 8,
     key: "Backspace",
@@ -176,6 +191,21 @@ export default [
     keyCode: 8,
     key: "Backspace",
     ms: 11062
+  },
+  {
+    eventType: 'animation',
+    callback: () => {
+      var hsl = {h: 194, s: 100, l: 80}
+      var tween = new TWEEN.Tween(hsl)
+        .to({l: 100}, 18000 - 12012)
+        .onUpdate(() => {
+          var hslString = Color(hsl).hslString()
+          $('body').css('background', hslString)
+        })
+        .easing(TWEEN.Easing.Quintic.Out)
+        .start()
+    },
+    ms: 12012
   },
   {
     eventType: 'keydown',
