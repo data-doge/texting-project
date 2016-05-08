@@ -1,3 +1,12 @@
+import $ from 'jquery'
+import TWEEN from 'tween.js'
+import Color from 'color'
+
+requestAnimationFrame(function animate (ms) {
+  requestAnimationFrame(animate)
+  TWEEN.update(ms)
+})
+
 export default [
   {
     eventType: 'keydown',
@@ -26,6 +35,21 @@ export default [
   {
     eventType: 'spanWrapStart',
     spanId: 'i-miss-u',
+    ms: 2206
+  },
+  {
+    eventType: 'animation',
+    callback: () => {
+      var hsl = {h: 310, s: 100, l: 0}
+      var tween = new TWEEN.Tween(hsl)
+        .to({l: 53}, 11062 - 2206)
+        .onUpdate(() => {
+          var hslString = Color(hsl).hslString()
+          $('#i-miss-u').css('color', hslString)
+        })
+        .easing(TWEEN.Easing.Quintic.Out)
+        .start()
+    },
     ms: 2206
   },
   {
